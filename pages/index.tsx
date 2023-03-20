@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+//import { Inter } from 'next/font/google'
+import styles from '../styles/Home.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+//const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export function Home() {
   return (
     <>
       <Head>
@@ -59,7 +59,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
@@ -116,8 +116,10 @@ export default function Home() {
               with&nbsp;Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
     </>
   )
 }
+
+export default Home;
