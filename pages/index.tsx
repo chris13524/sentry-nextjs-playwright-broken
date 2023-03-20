@@ -1,11 +1,20 @@
+import { addBreadcrumb } from '@sentry/nextjs';
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect } from 'react'
 //import { Inter } from 'next/font/google'
 import styles from '../styles/Home.module.css'
 
 //const inter = Inter({ subsets: ['latin'] })
 
 export function Home() {
+  useEffect(() => {
+    // COMMENT ME OUT TO FIX `npm run test-ci`
+    addBreadcrumb({
+      level: "debug",
+      message: "Hello, world!",
+    });
+  });
   return (
     <>
       <Head>
